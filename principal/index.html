@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extreme - Burguers</title>
     <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 <body>
     <main id="cabecalho"> <!--inicio site-->
         <section class="fotos-cabecalho">
@@ -39,23 +39,41 @@
         </header>
         <div id="combos-individuais">
             <div id="combo-individual-p"> <!--inicio combos-->
-                <img src="https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2007/02/hamburguer-caseiro.jpg?resize=800%2C540&ssl=1"
-                    alt="">
+                    <img class="imagem-p" src="https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2007/02/hamburguer-caseiro.jpg?resize=800%2C540&ssl=1" alt="">
                 <p>combo individual p</p>
-                <span>1 Hamburguer a sua escolha.
-                    (salada, bacon, burguer barbecue ou chicken). <br>
+                <span class="cardapio-individual-p" >
+                    1 Hamburguer a sua escolha.
+                    (Bacon Extreme, chedar extreme, burguer 4 queijos ou chicken extreme). <br>
                     1 batata individual c/ molho <br>
                     1 refrigerante lata 350 ml
                 </span>
+                <span id="aumentar-quantidade">
+                    <span class="contador">1</span>
+                    <svg class="button" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M 11 1 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"></path>
+                    </svg>
+                    <span class="diminuir-quantidade"></span>
+                </span>
+                <div id="carrinho-compra"><img class="imagem-carrinho" src="https://images.vexels.com/media/users/3/132114/isolated/preview/5367202ad4dd11725544cb3008049f96-icone-plano-de-carrinho-de-compras.png" alt=""><span>R$ 33,00</span></div>
+            </span>
             </div>
             <div id="combo-individual-m">
                 <img src="https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2007/02/hamburguer-caseiro.jpg?resize=800%2C540&ssl=1"
+            
                     alt="">
                 <p>combo individual m</p>
                 <span>1 Hamburguer a sua escolha.
                     (Bacon Extreme, chedar extreme, burguer 4 queijos ou chicken extreme). <br>
                     1 batata individual c/ molho <br>
                     1 refrigerante lata 350 ml
+                    <span id="aumentar-quantidade">
+                        <span class="contador">1</span>
+                        <svg class="button" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M 11 1 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"></path>
+                        </svg>
+                        <span class="diminuir-quantidade"></span>
+                    </span>
+                    <div id="carrinho-compra"><img class="imagem-carrinho" src="https://images.vexels.com/media/users/3/132114/isolated/preview/5367202ad4dd11725544cb3008049f96-icone-plano-de-carrinho-de-compras.png" alt=""><span>R$ 33,00</span></div>
                 </span>
             </div>
             <div id="combo-individual-g">
@@ -123,6 +141,7 @@
             </span>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>

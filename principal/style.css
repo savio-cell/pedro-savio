@@ -7,6 +7,10 @@ html{
 *{
     width: 100%;
 }
+:root{
+    --background:#FAAA53;
+    --color:white;
+}
 body{
     margin: 0;
     background: url(https://img.freepik.com/fotos-premium/mesa-madera-vacia-fondo-interior-borroso-cafeteria-o-restaurante-puede-utilizar-exhibicion-producto_7188-1498.jpg);
@@ -14,9 +18,7 @@ body{
     background-attachment: fixed;
     background-repeat: repeat-x;
 }
-:root{
-    --cor:#FAAA53;
-}
+
 #cabecalho{ /*inicio cabecalho*/
     box-shadow: 1px 1px 20px 1px black;
     background: black;
@@ -26,12 +28,12 @@ body{
     
 }
 .menu-cabecalho{/*inicio menu*/
-    border-right: 1px solid orange;
+    border-right: 1px solid var(--background);
     width: 200px;
     height: 660px;
     margin-top: 5px;
     width: 200px;
-    color: var(--cor);
+    color: var(--background);
     display: flex;
     flex-direction: column;
 }
@@ -42,7 +44,11 @@ body{
 }
 a{
     text-decoration: none;
-    color:var(--cor);
+    color:var(--background);
+}
+a:hover{
+    color: #d89d5e6b;
+    transition: .1s;
 }
 
 .fotos-cabecalho{
@@ -67,8 +73,12 @@ header{
     top: 0;
 }
 /*fim menu*/
-#combo-individual-p{/*inicio combo*/
-    background: var(--cor);
+
+#combo-individual-p{/*inicio combo p*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--background);
     position: relative;
     left: 248px;
     width: 270px;
@@ -77,22 +87,38 @@ header{
     padding-left: 10px; 
     padding-bottom: 5px;
 }
-#combo-individual-p:hover{
-    transform: scale(1.1);
+.cardapio-individual-p{
+    display: none;
 }
 #combo-individual-p img{
    width: 280px;
+   height: 300px;
+   object-fit: cover;
    position: relative;
    right:10px;
+   display: flex;
+}
+
+#combo-individual-p p:hover{
+    height: 850px;
+    display: block;
+    
+}
+#combo-individual-p .cardapio-individual-p:hover{
+    display: none;
+}
+#aumentar-quantidade:hover, #carrinho-compra:hover{
+    display: block;
 }
 #combo-individual-p p{
     text-align:center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
-    bottom:15px;
+    bottom:10px;
     text-transform: uppercase ;
+    
 }
 #combo-individual-p span{
     font-size:1em;
@@ -101,19 +127,21 @@ header{
     bottom: 20px;
     
 }
-#combo-individual-m{
+
+#combo-individual-m{ /*inicio combo-individual-m*/
     position: relative;
-    background: orange;
+    background: var(--background);
     left: 580px;
     width: 270px;
-    height: 340px;
+    height: 365px;
     bottom:945px;
     padding-left: 10px; 
     padding-bottom: 5px;
    
 }
 #combo-individual-m:hover{
-    transform: scale(1.1);
+    animation: float 6s ease-out infinite ;
+    cursor: pointer;
 }
 #combo-individual-m img{
    width: 280px;
@@ -122,7 +150,7 @@ header{
 }
 #combo-individual-m p{
     text-align:center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
@@ -135,9 +163,62 @@ header{
     position: relative;
     bottom: 30px;
 }
-#combo-individual-g{
+#aumentar-quantidade{
+    display: flex;
+    justify-content: end;
+    align-items: end;
     position: relative;
-    background: orange;
+    top: 15px;
+    left: 50px;
+    background-color: rgba(128, 128, 128, 0.638);
+    border-radius: 30px;
+    width: 80px;
+    display: none;
+}
+.button{
+    width: 35px;
+    height: 20px;
+    position: relative;
+    left:15px;
+    padding-left: 30px;
+}
+.contador{
+    display: flex;
+    position: relative; 
+    top: 0px;
+    left: 35px;
+    color: white;
+    user-select: none;
+}
+#carrinho-compra{
+    background-color: green;
+    width: 115px;
+    height: 30px;
+    position: relative;
+    left: 150px;
+    bottom: 15px;
+    border-radius:30px ;
+    display: none;
+}
+#carrinho-compra span{
+    font-size: 13px;
+    position: relative;
+    left: 15px;
+    bottom: 23px;
+}
+#carrinho-compra .imagem-carrinho{
+    display:flex;
+    position: relative;
+    left: 75px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+/*fim combo-individual-m*/
+#combo-individual-g{ /*inicio combo-individual-g*/
+    position: relative;
+    background: var(--background);
     left: 245px;
     width: 615px;
     height: 340px;
@@ -178,12 +259,16 @@ header{
     bottom: 300px;
     left: 260px;
 }
+#combo-individual-g:hover{ /*fim combo-individual-g*/
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
+}
 #combos-casal{
     display: flex;
-}
+} /*inicio combo-casal-p*/
 #combo-casal-p{
     position: relative;
-    background: orange;
+    background: var(--background);
     left: 245px;
     width: 270px;
     height: 340px;
@@ -192,7 +277,8 @@ header{
     padding-bottom: 5px;
 }
 #combo-casal-p:hover{
-    transform: scale(1.1);
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
 }
 #combo-casal-p img{
     width: 280px;
@@ -201,7 +287,7 @@ header{
 }
 #combo-casal-p p{
     text-align:center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
@@ -213,10 +299,10 @@ header{
     font-family: sans-serif;
     position: relative;
     bottom: 30px;
-}
-#combo-casal-m{
+} /*fim combo-casal-p*/
+#combo-casal-m{ /*inicio combo-casal-m*/
     position: relative;
-    background: orange;
+    background: var(--background);
     left: 300px;
     width: 270px;
     height: 340px;
@@ -226,7 +312,8 @@ header{
     
 }
 #combo-casal-m:hover{
-    transform: scale(1.1);
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
 }
 #combo-casal-m img{
     width: 280px;
@@ -235,7 +322,7 @@ header{
 }
 #combo-casal-m p{
     text-align:center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
@@ -247,10 +334,10 @@ header{
     font-family: sans-serif;
     position: relative;
     bottom: 30px;
-}
-#combo-casal-g{
+} /*fim combo-casal-m*/
+#combo-casal-g{ /*inicio combo-casal-g*/
     position: relative;
-    background: orange;
+    background: var(--background);
     right: 315px;
     width: 270px;
     height: 340px;
@@ -260,7 +347,8 @@ header{
     
 }
 #combo-casal-g:hover{
-    transform: scale(1.1);
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
 }
 #combo-casal-g img{
     width: 280px;
@@ -269,7 +357,7 @@ header{
 }
 #combo-casal-g p{
     text-align:center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
@@ -281,10 +369,10 @@ header{
     font-family: sans-serif;
     position: relative;
     bottom: 30px;
-}
-#combo-casal-extreme{
+} /*fim combo-casal-g*/
+#combo-casal-extreme{ /*inicio combo-extreme*/
     position: relative;
-    background: orange;
+    background: var(--background);
     right: 260px;
     width: 270px;
     height: 340px;
@@ -294,7 +382,8 @@ header{
     
 }
 #combo-casal-extreme:hover{
-    transform: scale(1.1);
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
 }
 #combo-casal-extreme img{
     width: 280px;
@@ -303,7 +392,7 @@ header{
 }
 #combo-casal-extreme p{
     text-align:center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
@@ -315,11 +404,11 @@ header{
     font-family: sans-serif;
     position: relative;
     bottom: 30px;
-}
-#combo-familia{
+} /*fim combo-extreme*/
+#combo-familia{ /*inicio combo-familia*/
     display: flex;
     position: relative;
-    background: orange;
+    background: var(--background);
     left: 250px;
     width:615px;
     height: 340px;
@@ -336,7 +425,7 @@ header{
 #combo-familia p{
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--color);
     font-size: 1.3em;
     font-family: monospace;
     position: relative;
@@ -345,7 +434,6 @@ header{
     text-transform: uppercase ;
 }
 #combo-familia span{
-    word-wrap:;
     width: 800px;
     font-size:1.8em;
     font-family: monospace;
@@ -353,6 +441,10 @@ header{
     top: 50px;
     right: 150px;
 }
+#combo-familia:hover{
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
+} /*fim combo-familia*/
 /*configuraçoes gerais*/
 span{
     font-family:'Roboto Condensed';
