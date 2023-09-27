@@ -1,168 +1,193 @@
 @charset "UTF-8";
-  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&family=Roboto+Condensed:wght@700&display=swap');
-html{
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&family=Quicksand:wght@300&family=Roboto+Condensed:wght@700&display=swap');
+
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
-}
-*{
-    width: 100%;
-}
-:root{
-    --background:#FAAA53;
-    --color:white;
-}
-body{
-    margin: 0;
-    background: url(https://img.freepik.com/fotos-premium/mesa-madera-vacia-fondo-interior-borroso-cafeteria-o-restaurante-puede-utilizar-exhibicion-producto_7188-1498.jpg);
-    background-size:  contain;
-    background-attachment: fixed;
-    background-repeat: repeat-x;
+
 }
 
-#cabecalho{ /*inicio cabecalho*/
+* {
+    width: 100%;
+    cursor: pointer;
+
+}
+
+:root {
+    --background: #FAAA53;
+    --color: white;
+}
+
+body {
+    margin: 0;
+    background: url(https://img.freepik.com/fotos-premium/mesa-madera-vacia-fondo-interior-borroso-cafeteria-o-restaurante-puede-utilizar-exhibicion-producto_7188-1498.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+
+}
+
+/*inicio cabecalho*/
+#cabecalho {
     box-shadow: 1px 1px 20px 1px black;
     background: black;
     padding: 10px;
     margin: auto;
     width: 950px;
-    
+    height: 2400px;
+
 }
-.menu-cabecalho{/*inicio menu*/
+
+/*inicio menu*/
+.menu-cabecalho {
     border-right: 1px solid var(--background);
-    width: 200px;
     height: 660px;
     margin-top: 5px;
-    width: 200px;
+    width: 240px;
     color: var(--background);
     display: flex;
     flex-direction: column;
 }
-.menu-cabecalho span{
-    font-size: 0.9em;
+.menu-cabecalho span {
+    font-size: 1.2em;
     text-transform: uppercase;
     padding: 15px;
 }
-a{
-    text-decoration: none;
-    color:var(--background);
+.menu-cabecalho img{
+    border-radius: 200px
 }
-a:hover{
+a {
+    text-decoration: none;
+    color: var(--background);
+}
+
+a:hover {
     color: #d89d5e6b;
     transition: .1s;
 }
 
-.fotos-cabecalho{
+.fotos-cabecalho {
     display: flex;
     margin: auto;
     width: 950px;
     height: 450px;
 }
-.fotos-cabecalho img{
+
+.fotos-cabecalho img {
     width: 0;
     flex-grow: 1;
     object-fit: cover;
-    transition: .5s ease ;
+    transition: .5s ease;
 }
-.fotos-cabecalho img:hover{
+
+.fotos-cabecalho img:hover {
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
 }
-header{
+
+header {
     position: sticky;
     top: 0;
 }
+
 /*fim menu*/
 
-#combo-individual-p{/*inicio combo p*/
+
+
+/*inicio combo p*/
+#combo-individual-p {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     background: var(--background);
     position: relative;
-    left: 248px;
-    width: 270px;
-    height: 340px;
-    bottom:600px;
-    padding-left: 10px; 
+    left: 260px;
+    width: 620px;
+    height: 200px;
+    bottom: 640px;
+    padding-left: 10px;
     padding-bottom: 5px;
 }
-.cardapio-individual-p{
-    display: none;
-}
-#combo-individual-p img{
-   width: 280px;
-   height: 300px;
-   object-fit: cover;
-   position: relative;
-   right:10px;
-   display: flex;
+#combo-individual-p img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
 }
 
-#combo-individual-p p:hover{
-    height: 850px;
-    display: block;
-    
-}
-#combo-individual-p .cardapio-individual-p:hover{
-    display: none;
-}
-#aumentar-quantidade:hover, #carrinho-compra:hover{
-    display: block;
-}
-#combo-individual-p p{
-    text-align:center;
+#combo-individual-p p {
+    white-space: nowrap;
+    text-align: center;
     color: var(--color);
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-family: monospace;
     position: relative;
-    bottom:10px;
-    text-transform: uppercase ;
-    
-}
-#combo-individual-p span{
-    font-size:1em;
-    font-family: sans-serif;
-    position: relative;
-    bottom: 20px;
-    
+    bottom: 10px;
+    text-transform: uppercase;
 }
 
-#combo-individual-m{ /*inicio combo-individual-m*/
+#combo-individual-p span {
+    font-size: 1.4em;
     position: relative;
+    top: 40px;
+    right: 190px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
+}
+
+
+/*fim combo p */
+
+
+
+/*inicio combo-individual-m*/
+#combo-individual-m {
+    display: flex;
     background: var(--background);
-    left: 580px;
-    width: 270px;
-    height: 365px;
-    bottom:945px;
-    padding-left: 10px; 
+    position: relative;
+    left: 260px;
+    width: 620px;
+    height: 200px;
+    bottom: 615px;
+    padding-left: 10px;
     padding-bottom: 5px;
-   
+
 }
-#combo-individual-m:hover{
-    animation: float 6s ease-out infinite ;
-    cursor: pointer;
+
+#combo-individual-m img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
 }
-#combo-individual-m img{
-   width: 280px;
-   position: relative;
-   right:10px;
-}
-#combo-individual-m p{
-    text-align:center;
+
+#combo-individual-m p {
+    white-space: nowrap;
+    text-align: center;
     color: var(--color);
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-family: monospace;
     position: relative;
-    bottom:15px;
-    text-transform: uppercase ;
+    bottom: 10px;
+    text-transform: uppercase;
 }
-#combo-individual-m span{
-    font-size:1em;
-    font-family: sans-serif;
+
+#combo-individual-m span {
+    font-size: 1.4em;
     position: relative;
-    bottom: 30px;
+    top: 40px;
+    right: 190px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
 }
+
+/*  *   COMENTARIO DO CARRINHO DE COMPRA   *
 #aumentar-quantidade{
     display: flex;
     justify-content: end;
@@ -214,239 +239,330 @@ header{
     width: 30px;
     height: 30px;
 }
-
+*/
 /*fim combo-individual-m*/
-#combo-individual-g{ /*inicio combo-individual-g*/
-    position: relative;
+
+
+/*inicio combo-individual-g*/
+#combo-individual-g {
+    display: flex;
     background: var(--background);
-    left: 245px;
-    width: 615px;
-    height: 340px;
-    bottom:870px;
+    position: relative;
+    left: 260px;
+    width: 620px;
+    height: 200px;
+    bottom: 590px;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
-#combo-individual-g img{
-    display: flex;
+#combo-individual-g img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
     object-fit: cover;
-    width: 250px;
-    height: 340px;
-}
-#combo-individual-g p{
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+#combo-individual-g p {
+    text-align: center;
     margin: auto;
-    border-bottom: 1px solid black;
     width: 325px;
     padding-bottom: 5px;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-family: monospace;
     position: relative;
-    bottom:325px;
-    left:120px;
-    text-transform: uppercase ;
-}
-#combo-individual-g span{
-    display: flex;
-    color: black;
-    text-align: ;
-    font-size:1.8em;
-    width: 325px;
-    height: 300px;
-    font-family: monospace;
-    position: relative;
-    bottom: 300px;
-    left: 260px;
-}
-#combo-individual-g:hover{ /*fim combo-individual-g*/
-    animation: float 6s ease-out infinite;
-    cursor: pointer;
-}
-#combos-casal{
-    display: flex;
-} /*inicio combo-casal-p*/
-#combo-casal-p{
-    position: relative;
-    background: var(--background);
-    left: 245px;
-    width: 270px;
-    height: 340px;
-    bottom:800px;
-    padding-left: 10px; 
-    padding-bottom: 5px;
-}
-#combo-casal-p:hover{
-    animation: float 6s ease-out infinite;
-    cursor: pointer;
-}
-#combo-casal-p img{
-    width: 280px;
-    position: relative;
-    right:10px;
-}
-#combo-casal-p p{
-    text-align:center;
-    color: var(--color);
-    font-size: 1.3em;
-    font-family: monospace;
-    position: relative;
-    bottom:15px;
-    text-transform: uppercase ;
-}
-#combo-casal-p span{
-    font-size:1em;
-    font-family: sans-serif;
-    position: relative;
-    bottom: 30px;
-} /*fim combo-casal-p*/
-#combo-casal-m{ /*inicio combo-casal-m*/
-    position: relative;
-    background: var(--background);
-    left: 300px;
-    width: 270px;
-    height: 340px;
-    bottom:800px;
-    padding-left: 10px; 
-    padding-bottom: 5px;
-    
-}
-#combo-casal-m:hover{
-    animation: float 6s ease-out infinite;
-    cursor: pointer;
-}
-#combo-casal-m img{
-    width: 280px;
-    position: relative;
-    right:10px;
-}
-#combo-casal-m p{
-    text-align:center;
-    color: var(--color);
-    font-size: 1.3em;
-    font-family: monospace;
-    position: relative;
-    bottom:15px;
-    text-transform: uppercase ;
-}
-#combo-casal-m span{
-    font-size:1em;
-    font-family: sans-serif;
-    position: relative;
-    bottom: 30px;
-} /*fim combo-casal-m*/
-#combo-casal-g{ /*inicio combo-casal-g*/
-    position: relative;
-    background: var(--background);
-    right: 315px;
-    width: 270px;
-    height: 340px;
-    bottom:380px;
-    padding-left: 10px; 
-    padding-bottom: 5px;
-    
-}
-#combo-casal-g:hover{
-    animation: float 6s ease-out infinite;
-    cursor: pointer;
-}
-#combo-casal-g img{
-    width: 280px;
-    position: relative;
-    right:10px;
-}
-#combo-casal-g p{
-    text-align:center;
-    color: var(--color);
-    font-size: 1.3em;
-    font-family: monospace;
-    position: relative;
-    bottom:15px;
-    text-transform: uppercase ;
-}
-#combo-casal-g span{
-    font-size:1em;
-    font-family: sans-serif;
-    position: relative;
-    bottom: 30px;
-} /*fim combo-casal-g*/
-#combo-casal-extreme{ /*inicio combo-extreme*/
-    position: relative;
-    background: var(--background);
-    right: 260px;
-    width: 270px;
-    height: 340px;
-    bottom:380px;
-    padding-left: 10px; 
-    padding-bottom: 5px;
-    
-}
-#combo-casal-extreme:hover{
-    animation: float 6s ease-out infinite;
-    cursor: pointer;
-}
-#combo-casal-extreme img{
-    width: 280px;
-    position: relative;
-    right:10px;
-}
-#combo-casal-extreme p{
-    text-align:center;
-    color: var(--color);
-    font-size: 1.3em;
-    font-family: monospace;
-    position: relative;
-    bottom:15px;
-    text-transform: uppercase ;
-}
-#combo-casal-extreme span{
-    font-size:1em;
-    font-family: sans-serif;
-    position: relative;
-    bottom: 30px;
-} /*fim combo-extreme*/
-#combo-familia{ /*inicio combo-familia*/
-    display: flex;
-    position: relative;
-    background: var(--background);
-    left: 250px;
-    width:615px;
-    height: 340px;
-    bottom:320px;
+    bottom: 85px;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
 
-#combo-familia img{
+#combo-individual-g span {
+    font-size: 1.4em;
+    position: relative;
+    top: 40px;
+    right: 190px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
+}
+
+/*fim combo-individual-g*/
+
+
+#combos-casal {
     display: flex;
+}
+
+/*inicio combo-casal-p*/
+#combo-casal-p {
+    display: flex;
+    background: var(--background);
+    position: relative;
+    left: 260px;
+    width: 620px;
+    height: 200px;
+    bottom: 565px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#combo-casal-p img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
     object-fit: cover;
-    width: 250px;
     position: relative;
-    right:10px;
-}
-#combo-familia p{
     display: flex;
-    justify-content: center;
-    color: var(--color);
-    font-size: 1.3em;
+}
+
+#combo-casal-p p {
+    text-align: center;
+    margin: auto;
+    width: 360px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 1.5em;
     font-family: monospace;
     position: relative;
-    left: 85px;
-    bottom:15px;
-    text-transform: uppercase ;
+    bottom: 85px;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
-#combo-familia span{
-    width: 800px;
-    font-size:1.8em;
-    font-family: monospace;
+
+#combo-casal-p span {
+    font-size: 1.4em;
     position: relative;
-    top: 50px;
-    right: 150px;
+    top: 40px;
+    right: 140px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
 }
-#combo-familia:hover{
+
+/*fim combo-casal-p*/
+
+
+/*inicio combo-casal-m*/
+#combo-casal-m {
+    display: flex;
+    background: var(--background);
+    position: relative;
+    width: 620px;
+    height: 200px;
+    bottom: 335px;
+    right: 367px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+}
+
+#combo-casal-m:hover {
     animation: float 6s ease-out infinite;
     cursor: pointer;
-} /*fim combo-familia*/
-/*configuraçoes gerais*/
-span{
-    font-family:'Roboto Condensed';
+}
+
+#combo-casal-m img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+}
+
+#combo-casal-m p {
+    text-align: center;
+    margin: auto;
+    width: 350px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
+    position: relative;
+    bottom: 85px;
+    white-space: nowrap;
     text-transform: uppercase;
+}
+
+#combo-casal-m span {
+    font-size: 1.4em;
+    position: relative;
+    top: 40px;
+    right: 140px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
+}
+
+/*fim combo-casal-m*/
+
+/*inicio combo-casal-g*/
+#combo-casal-g {
+    display: flex;
+    background: var(--background);
+    position: relative;
+    width: 620px;
+    height: 200px;
+    bottom: 100px;
+    right: 996px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+}
+
+#combo-casal-g:hover {
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
+}
+
+#combo-casal-g img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+}
+
+#combo-casal-g p {
+    text-align: center;
+    margin: auto;
+    width: 350px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
+    position: relative;
+    bottom: 85px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+#combo-casal-g span {
+    font-size: 1.4em;
+    position: relative;
+    top: 40px;
+    right: 140px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
+}
+
+
+/*fim combo-casal-g*/
+
+/*inicio combo-extreme*/
+#combo-casal-extreme {
+    display: flex;
+    background: var(--background);
+    position: relative;
+    width: 620px;
+    height: 200px;
+    top: 135px;
+    right: 1625px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+}
+
+#combo-casal-extreme:hover {
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
+}
+
+#combo-casal-extreme img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+}
+
+#combo-casal-extreme p {
+    text-align: center;
+    margin: auto;
+    width: 350px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
+    position: relative;
+    bottom: 85px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+#combo-casal-extreme span {
+    font-size: 1.4em;
+    position: relative;
+    top: 40px;
+    right: 205px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
+}
+
+/*fim combo-extreme*/
+
+/*inicio combo-familia*/
+#combo-familia {
+    display: flex;
+    background: var(--background);
+    position: relative;
+    left: 260px;
+    width: 620px;
+    height: 200px;
+    top: 190px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#combo-familia img {
+    width: 260px;
+    height: 205px;
+    right: 10px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+}
+
+#combo-familia p {
+    text-align: center;
+    margin: auto;
+    width: 350px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
+    position: relative;
+    bottom: 85px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+#combo-familia span {
+    font-size: 1.4em;
+    position: relative;
+    top: 40px;
+    right: 140px;
+    white-space: nowrap;
+    text-align: justify;
+    font-family: 'Areia movediça' !important;
+}
+
+#combo-familia:hover {
+    animation: float 6s ease-out infinite;
+    cursor: pointer;
+}
+
+/*fim combo-familia*/
+
+
+/*configuraçoes gerais*/
+span {
+    font-family: 'Roboto Condensed';
 }
